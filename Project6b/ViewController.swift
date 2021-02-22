@@ -5,6 +5,13 @@
 //  Created by Frank Solleveld on 22/02/2021.
 //
 
+/*
+ CHALLENGE TIME
+ 1. Try replacing the widthAnchor of our labels with leadingAnchor and trailingAnchor constraints.
+ 2. Once you've completed the first challenge, try using the safeAreaLayoutGuide for those constraints.
+ 3. Try making the height of your labels equal to 1/5th of the main view, minus 10 for the spacing.
+ */
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -50,14 +57,7 @@ class ViewController: UIViewController {
         view.addSubview(label3)
         view.addSubview(label4)
         view.addSubview(label5)
-        
-//        let viewsDictionary = ["label1": label1, "label2": label2, "label3": label3, "label4": label4, "label5": label5]
-//        for label in viewsDictionary.keys {
-//            view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[\(label)]|", options: [], metrics: nil, views: viewsDictionary))
-//        }
-//        let metrics = ["labelHeight": 88]
-//        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1(labelHeight@999)]-[label2(label1)]-[label3(label1)]-[label4(label1)]-[label5(label1)]-(>=10)-|", options: [], metrics: metrics, views: viewsDictionary))
-        
+    
         var previous: UILabel?
         
         for label in [label1, label2, label3, label4, label5] {
@@ -76,7 +76,4 @@ class ViewController: UIViewController {
         // MARK: Delegate Methods
         
     }
-
-
 }
-
